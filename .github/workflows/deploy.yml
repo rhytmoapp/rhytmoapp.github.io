@@ -37,9 +37,9 @@ jobs:
         working-directory: release/platforms/web
         run: npm run build
 
-      - name: Copy CNAME file
-        if: hashFiles('CNAME') != ''
-        run: cp CNAME release/platforms/web/build/CNAME
+      # - name: Copy CNAME file
+      #   if: hashFiles('CNAME') != ''
+      #   run: cp CNAME release/platforms/web/build/CNAME
 
       - name: Create .nojekyll file
         run: touch release/platforms/web/build/.nojekyll
